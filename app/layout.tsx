@@ -13,40 +13,40 @@ const karla = Karla({
 })
 
 export const metadata: Metadata = {
-	title: 'Whisppr — Silent SOS to trusted contacts',
-	description: 'Discreetly alert trusted contacts with your live location via iPhone widgets or Shortcuts. 5-second undo. Privacy-first.',
-	keywords: ['emergency', 'SOS', 'safety', 'location', 'iPhone', 'privacy'],
-	authors: [{ name: 'Whisppr' }],
+	title: 'embark - travel smarter. live freer.',
+	description: 'Embark is your ultimate travel companion, designed to help you explore the world with confidence and ease. From budgeting tools to safety features, embark has everything you need for a seamless journey.',
+	keywords: ['travel app', 'travel companion', 'budget travel', 'travel safety', 'itinerary planner', 'travel alerts', 'location sharing', 'offline maps', 'travel deals', 'Embark'],
+	authors: [{ name: 'embark' }],
 	icons: {
 		icon: '/favicon.ico',
 		shortcut: '/favicon.ico',
 		apple: '/apple-touch-icon.png',
 	},
 	openGraph: {
-		title: 'Whisppr — Silent SOS to trusted contacts',
-		description: 'Discreetly alert trusted contacts with your live location via iPhone widgets or Shortcuts. 5-second undo. Privacy-first.',
+		title: 'embark — travel smarter. live freer.',
+		description: 'Embark is your ultimate travel companion, designed to help you explore the world with confidence and ease. From budgeting tools to safety features, embark has everything you need for a seamless journey.',
 		type: 'website',
 		locale: 'en_US',
-		url: 'https://whisppr.app',
-		siteName: 'Whisppr',
+		url: 'https://embarkapp.com',
+		siteName: 'embark',
 		images: [
 			{
 				url: '/og.png',
 				width: 1200,
 				height: 630,
-				alt: 'Whisppr - Silent SOS to trusted contacts',
+				alt: 'embark - travel smarter. live freer.',
 			},
 		],
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Whisppr — Silent SOS to trusted contacts',
-		description: 'Discreetly alert trusted contacts with your live location via iPhone widgets or Shortcuts. 5-second undo. Privacy-first.',
+		title: 'embark — travel smarter. live freer.',
+		description: 'Embark is your ultimate travel companion, designed to help you explore the world with confidence and ease. From budgeting tools to safety features, embark has everything you need for a seamless journey.',
 		images: ['/og.png'],
-		creator: '@whisppr',
-		site: '@whisppr',
+		creator: '@embark',
+		site: '@embark',
 	},
-	metadataBase: new URL('https://whisppr.app'),
+	metadataBase: new URL('https://embarkapp.com'),
 }
 
 export const viewport: Viewport = {
