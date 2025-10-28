@@ -7,22 +7,18 @@ import { motion } from 'framer-motion'
  * SVG-based with curved connecting lines and grouped features
  */
 
-const bgStyle = {
-	background: 'linear-gradient(135deg, #FFFFFF 0%, #FAFAFA 100%)',
-} as const
-
 // SVG Icon Components (reusable via defs)
 export function IntegrationsHub() {
 	return (
-		<section className="relative py-24 lg:py-32 overflow-hidden" style={bgStyle}>
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+		<section className="relative py-24 lg:py-25 overflow-hidden">
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Header */}
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6 }}
-					className="text-center mb-8"
+					className="text-center mb-4"
 				>
 					<h2 className="text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#CF5376' }}>
 						travel shouldn't feel fragmented.
@@ -33,7 +29,7 @@ export function IntegrationsHub() {
 				</motion.div>
 
 				{/* SVG Visualization */}
-				<div className="relative w-full" style={{ minHeight: '700px' }}>
+				<div className="relative w-full -my-10" style={{ minHeight: '700px' }}>
 					<svg viewBox="0 0 1600 900" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
 						{/* ====== Icon Definitions ====== */}
 						<defs>
@@ -239,7 +235,7 @@ export function IntegrationsHub() {
 						<g transform="translate(350, 250)">
 							<circle cx={0} cy={0} r={5} fill="#E65447" />
 							<g style={{ color: '#E65447' }} transform="translate(-100, -20)">
-								<circle cx={0} cy={0} r={35} fill="#FFFFFF" stroke="#FFB578" strokeWidth={2} />
+								<circle cx={0} cy={0} r={35} fill="none" stroke="#FFB578" strokeWidth={2} />
 								<use href="#icon-delta-logo" transform="translate(-15, -12) scale(0.2)" />
 							</g>
 							<g style={{ color: '#E65447' }} transform="translate(-20, -60)">
@@ -326,11 +322,11 @@ export function IntegrationsHub() {
 						</g>
 						{/* ====== Side Icons: Integrations ====== */}
 						<g style={{ color: '#E65447' }} transform="translate(400, 450)">
-							<circle cx={0} cy={0} r={35} fill="#FFFFFF" stroke="#CF5376" strokeWidth={2} />
+							<circle cx={0} cy={0} r={35} fill="none" stroke="#CF5376" strokeWidth={2} />
 							<use href="#icon-bell" transform="translate(-12, -12) scale(1)" />
 						</g>
 						<g style={{ color: '#E65447' }} transform="translate(1200, 450)">
-							<circle cx={0} cy={0} r={35} fill="#FFFFFF" stroke="#E65447" strokeWidth={2} />
+							<circle cx={0} cy={0} r={35} fill="none" stroke="#E65447" strokeWidth={2} />
 							<use href="#icon-shield" transform="translate(-12, -12) scale(1)" />
 						</g>						{/* ====== Bottom Left Group: Bookings ====== */}
 						{/* ====== Bottom Right Group: Budget Tools ====== */}
@@ -382,7 +378,7 @@ export function IntegrationsHub() {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.6, delay: 0.3 }}
-					className="text-center mt-8"
+					className="text-center mt-4"
 				>
 					<a
 						href="#waitlist"

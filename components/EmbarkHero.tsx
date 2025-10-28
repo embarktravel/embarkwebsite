@@ -27,16 +27,8 @@ export function EmbarkHero() {
 	]
 
 	return (
-		<div className="relative min-h-screen flex flex-col items-center justify-start overflow-visible bg-bg">
-			{/* Faint sunset gradient overlay (10% opacity) for cinematic warmth */}
-			<div 
-				className="absolute inset-0 pointer-events-none opacity-10"
-				style={{
-					background: 'linear-gradient(135deg, #FFB578 0%, transparent 70%)'
-				}}
-			/>
-			
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-60 pb-20 lg:pb-32 relative z-10">
+		<div className="relative min-h-screen flex flex-col items-center justify-start overflow-visible">
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-50 pb-20 lg:pb-32 relative z-10">
 				<div className="max-w-4xl mx-auto">
 					{/* Centered Content */}
 					<motion.div

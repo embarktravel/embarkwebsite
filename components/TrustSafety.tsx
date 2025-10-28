@@ -22,8 +22,8 @@ const trustFeatures = [
 
 export function TrustSafety() {
 	return (
-		<section className="py-20 lg:py-32 bg-gradient-to-b from-white to-peach/5">
-			<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+		<section className="relative py-20 lg:py-32">
+			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}

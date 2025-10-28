@@ -171,13 +171,13 @@ export default function WaitlistForm() {
 						onChange={(e) => handleInputChange('email', e.target.value)}
 						disabled={formState === 'submitting'}
 						className={`
-							w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl border-[0.5px] backdrop-blur-sm
+							w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl border border-orange backdrop-blur-sm
 							transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed
 							focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 
 							focus:ring-offset-transparent text-sm sm:text-base min-h-[48px] sm:min-h-[52px]
 							${errors.email 
 								? 'border-coral bg-coral/5 text-text' 
-								: 'border-green bg-panel/10 text-text hover:border-green/80'
+								: 'bg-panel/10 text-text'
 							}
 						`}
 						placeholder="your@email.com"
@@ -208,39 +208,13 @@ export default function WaitlistForm() {
 						onChange={(e) => handleInputChange('name', e.target.value)}
 						disabled={formState === 'submitting'}
 						className="
-							w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl border-[0.5px] border-green 
+							w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl border border-orange 
 							bg-panel/10 backdrop-blur-sm text-text transition-all duration-200
-							hover:border-green/80 focus:outline-none focus:ring-2 focus:ring-accent/50 
+							focus:outline-none focus:ring-2 focus:ring-accent/50 
 							focus:ring-offset-2 focus:ring-offset-transparent text-sm sm:text-base min-h-[48px] sm:min-h-[52px]
 							disabled:opacity-50 disabled:cursor-not-allowed
 						"
 						placeholder="Your name"
-					/>
-				</div>
-			</div>
-
-			{/* Why Input - Optional */}
-			<div>
-				<label htmlFor="why" className="block text-sm font-medium text-text mb-2">
-					Why are you interested? <span className="text-muted text-xs">(optional)</span>
-				</label>
-				<div className="relative">
-					<MessageSquare className="absolute left-3 top-3 sm:top-4 w-4 sm:w-5 h-4 sm:h-5 text-muted z-10" aria-hidden="true" />
-					<textarea
-						id="why"
-						name="why"
-						value={formData.why}
-						onChange={(e) => handleInputChange('why', e.target.value)}
-						disabled={formState === 'submitting'}
-						rows={3}
-						className="
-							w-full pl-10 sm:pl-12 pr-4 py-3 sm:py-4 rounded-xl border-[0.5px] border-green 
-							bg-panel/10 backdrop-blur-sm text-text transition-all duration-200
-							hover:border-green/80 focus:outline-none focus:ring-2 focus:ring-accent/50 
-							focus:ring-offset-2 focus:ring-offset-transparent resize-none text-sm sm:text-base
-							disabled:opacity-50 disabled:cursor-not-allowed
-						"
-						placeholder="Tell us about your safety concerns or how you'd use Whisppr..."
 					/>
 				</div>
 			</div>
@@ -261,13 +235,14 @@ export default function WaitlistForm() {
 						/>
 						<div className={`
 							w-5 h-5 rounded border-2 flex items-center justify-center transition-all duration-200
+							border-orange
 							${formData.consent 
 								? 'bg-accent border-accent' 
 								: errors.consent 
 									? 'border-coral bg-coral/5'
-									: 'border-panel/60 bg-panel/10'
+									: 'bg-panel/10'
 							}
-							${formState === 'submitting' ? 'opacity-50' : 'hover:border-accent/60 group-hover:border-accent/60'}
+							${formState === 'submitting' ? 'opacity-50' : ''}
 						`}>
 							{formData.consent && (
 								<Check className="w-3 h-3 text-white" aria-hidden="true" />
@@ -275,7 +250,7 @@ export default function WaitlistForm() {
 						</div>
 					</div>
 					<span className={`text-sm sm:text-base leading-relaxed ${errors.consent ? 'text-coral' : 'text-muted'}`}>
-						I agree to join the Whisppr waitlist and receive updates about the app. *
+						I agree to join the embark waitlist and receive updates about the app. *
 					</span>
 				</label>
 				{errors.consent && (
@@ -291,11 +266,9 @@ export default function WaitlistForm() {
 				type="submit"
 				disabled={formState === 'submitting'}
 				className="
-					w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300
-					bg-accent text-black hover:bg-accent/90 focus:outline-none focus:ring-2 
-					focus:ring-accent/50 focus:ring-offset-2 focus:ring-offset-transparent
+					btn-primary w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300
+					text-white hover:bg-mauve/90
 					disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]
-					shadow-glow hover:shadow-glow-md
 				"
 			>
 				{formState === 'submitting' ? (

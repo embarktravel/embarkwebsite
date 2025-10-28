@@ -20,19 +20,19 @@ const footerVariants = {
 }
 
 const links = [
-	{ label: 'About', href: '#about' },
-	{ label: 'Press', href: '#press' },
-	{ label: 'Careers', href: '#careers' },
-	{ label: 'Privacy', href: '#privacy' },
-	{ label: 'Contact', href: '#contact' }
+	{ label: 'product', href: '#integrations' },
+	{ label: 'connect', href: '#waitlist' },
+	{ label: 'about us', href: '#about-us' }
 ]
 
 export default function Footer() {
 	const shouldReduceMotion = useReduced()
 
 	return (
-		<footer className="bg-gradient-sunset-flow border-t border-mauve/30">
-			<div className="max-w-7xl mx-auto px-6 py-12">
+		<footer className="relative bg-bg border-mauve/20 rounded-t-3xl overflow-hidden">
+			{/* Gradient overlay for cinematic warmth */}
+			<div className="absolute inset-0 pointer-events-none opacity-10 z-0" style={{background: 'linear-gradient(135deg, #FFB578 0%, transparent 70%)'}} />
+			<div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
 				<motion.div
 					variants={shouldReduceMotion ? {} : footerVariants}
 					initial="hidden"
@@ -43,15 +43,8 @@ export default function Footer() {
 					{/* Top section - Logo and tagline */}
 					<div className="text-center space-y-3">
 						<div className="flex items-center justify-center gap-2">
-							<h3 className="text-3xl font-bold text-white">
-								embark
-							</h3>
-							<PlaneIcon className="w-7 h-7 text-white" />
+							<img src="/embark.png" alt="Embark" className="h-20 w-auto mx-auto mb-2" />
 						</div>
-						<p className="text-apricot/90 italic flex items-center justify-center gap-2">
-							<span>Built by a global team of students and explorers.</span>
-							<GlobeIcon className="w-5 h-5 text-apricot inline" />
-						</p>
 					</div>
 
 					{/* Links */}
@@ -61,7 +54,7 @@ export default function Footer() {
 								<li key={link.label}>
 									<a
 										href={link.href}
-										className="text-white/90 hover:text-white transition-colors duration-200 font-medium"
+										className="text-charcoal/80 hover:text-sunset transition-colors duration-200 font-medium px-3 py-1 rounded-xl"
 									>
 										{link.label}
 									</a>
@@ -71,8 +64,8 @@ export default function Footer() {
 					</nav>
 
 					{/* Copyright */}
-					<div className="text-center pt-6 border-t border-white/20">
-						<p className="text-sm text-white/80">
+					<div className="text-center">
+						<p className="text-sm text-muted">
 							© 2025 Embark, Inc. | All Rights Reserved
 						</p>
 					</div>

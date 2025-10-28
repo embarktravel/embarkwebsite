@@ -75,7 +75,7 @@
 	
 	/* Primary CTA - Sunset solid color */
 	.btn-primary {
-		@apply btn text-white hover:shadow-glow-lg transition-all duration-300;
+		@apply btn text-white transition-all duration-300;
 		background: #E65447;
 	}
 	

@@ -44,11 +44,8 @@ export function Nav() {
 			</a>
 			
 			<motion.nav
-				className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-					isScrolled 
-						? 'bg-panel/90 backdrop-blur-lg border-b border-coral/20 shadow-sm' 
-						: 'bg-transparent'
-				}`}
+				className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'pt-4' : 'pt-6'}`}
+				style={{ background: 'transparent' }}
 				initial={{ y: -100 }}
 				animate={{ y: 0 }}
 				transition={{ duration: 0.5 }}
@@ -72,9 +69,9 @@ export function Nav() {
 
 						{/* Center Navigation Links - Desktop Only */}
 						<div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-							<NavLink href="#core-features">product</NavLink>
-							<NavLink href="#community">connect</NavLink>
-							<NavLink href="#trust-safety">about us</NavLink>
+							<NavLink href="#integrations">product</NavLink>
+							<NavLink href="#waitlist">connect</NavLink>
+							<NavLink href="#about-us">about us</NavLink>
 						</div>
 
 						{/* Right Side - CTA and Mobile Menu */}
