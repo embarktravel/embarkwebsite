@@ -195,18 +195,18 @@ export function TwoModes() {
 										))}
 									</div>
 								</motion.div>
-								<motion.div 
-									className="relative h-[32rem] rounded-3xl overflow-hidden flex items-center justify-center"
-									initial={{ opacity: 0, x: 50 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.1 }}
-								>
-									<img 
-										src="/feedupright.png" 
-										alt="Explore dashboard on phone" 
-										className="h-full w-auto object-contain"
-									/>
-								</motion.div>
+							<motion.div 
+								className="relative h-[32rem] rounded-3xl overflow-hidden flex items-center justify-center"
+								initial={{ opacity: 0, x: 50 }}
+								animate={{ opacity: 1, x: 0 }}
+								transition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.1 }}
+							>
+								<img 
+									src="/feedupright.png?v=2" 
+									alt="Explore dashboard on phone" 
+									className="h-full w-auto object-contain"
+								/>
+							</motion.div>
 							</div>
 						</motion.div>
 					)}
